@@ -11,7 +11,7 @@ let character = {
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
 let age = 20;
-age["character-age"];
+character["character-age"] = age;
 
 // - Add a new key `sur name` with the value of the surname of the character i.e "Stark". (Don't remove the space between `sur` and `name`)
 character[`sur name`]="Stark";
@@ -22,38 +22,28 @@ character.title="Lady of Winterfell";
 character.greet = function (){return alert(`I am [NAME HERE] and my title is [TITLE HERE]`);}
 
 // - Add a new property to the character object named `isFemale` and value will be `true`
-character.isFemale =`true`;
+character.isFemale =true;
 // - Execute the function stored in the greet key of the character object
-character.greet;
+character.greet();
 //  - Change the method `greet` to now alert `She is [NAME HERE] and her title is [TITLE HERE]`.
-character.greet= alert(`She is [NAME HERE] and her title is [TITLE HERE]`);
+character.greet= function(){ return alert(`She is [NAME HERE] and her title is [TITLE HERE]`)};
 // - Check by calling `greet` and see if the message changed or not.
-greet();
+character.greet();
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
-    if(age<18){
-        character[`isAdult`]=`true`
-    }
-    else{
-        character[`isAdult`]=`false` 
-    }
+character.isAdult=
+    character.age ? true : false ;
 
 
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
-character.changeIsAdult = function(){
-    if (isAdult=true){
-        return `false`
-    }
-    else if(isAdult=false){
-        return `true`
-    }
-    
+character.isAdult = function(){
+    character.isAdult = !character.isAdult;
 }
 // - Add a new key with the name stored in variable `keyName` defined below i.e `changeIsAdult` (use [] for computed property) and the value of "Maisie Williams"
 
 let keyName = 'playedBy';
-keyName['playedBy']=alert("Maisie Williams");
+keyName[`playedBy`]= "Maisie Williams";
 // - Using `alert` alert the value stored in key you added above `keyName` use the variable name to access
-keyName['playedBy']=alert("Maisie Williams");
+alert(keyName[`playedBy`])
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
 console.log(`42`)
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
