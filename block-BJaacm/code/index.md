@@ -18,18 +18,18 @@ let newUser = user;
 
 2. Answer the following with reason:
 
-- `user == newUser;` // output and reason
-- `user === newUser;`
-- `user.name === newUser.name;`
-- `user.name == newUser.name;`
-- `user.sibling == newUser.sibling;`
-- `user.sibling === newUser.sibling;`
-- `user.sibling == allBrothers;`
-- `user.sibling === allBrothers;`
-- `brothersCopy === allBrothers;`
-- `brothersCopy == allBrothers;`
-- `brothersCopy == user.sibling;`
-- `brothersCopy === user.sibling;`
-- `brothersCopy[0] === user.sibling[0];`
-- `brothersCopy[1] === user.sibling[1];`
-- `user.sibling[1] === newUser.sibling[1];`
+- `user == newUser;` // true because both newUser and user addresing some object so it is true
+- `user === newUser;`// true because both newUser and user addresing some object so it is true
+- `user.name === newUser.name;`//true because both newUser and user addresing some object that's why here same  keyword is also equal 
+- `user.name == newUser.name;`// true because both newUser and user addresing some object that's why here same  keyword is also equal 
+- `user.sibling == newUser.sibling;`//true because both newUser and user addresing some object that's why here same  keyword is also equal 
+- `user.sibling === newUser.sibling;`//true because both newUser and user addresing some object that's why here same  keyword is also equal 
+- `user.sibling == allBrothers;`//false because user sibling is a keyword and allBrothers is a typeof object.
+- `user.sibling === allBrothers;`//false because user sibling is a keyword and allBrothers is a typeof object.
+- `brothersCopy === allBrothers;`//false because brothersCopy assign user.sibling and it is a key so that it is not equal to allBrothers.
+- `brothersCopy == allBrothers;`//false because brothersCopy assign user.sibling and it is a key so that it is not equal to allBrothers.
+- `brothersCopy == user.sibling;`//true because brotherCopy is copy by reference to user.sibling.
+- `brothersCopy === user.sibling;`//true because brotherCopy is copy by reference to user.sibling.
+- `brothersCopy[0] === user.sibling[0];`//true because brotherCopy is copy by reference to user.sibling so its element also equal
+- `brothersCopy[1] === user.sibling[1];`//true because brotherCopy is copy by reference to user.sibling so its element also equal
+- `user.sibling[1] === newUser.sibling[1];`//true because both newUser and user addresing some object that's why here same  keyword and its value is also equal .
