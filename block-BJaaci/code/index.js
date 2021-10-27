@@ -89,37 +89,37 @@ for(let movie of movies){
 console.log(movies[0].title== `Hannah`);
 // 25. Log the number of actors in all three movies one by one
 for(let movie of movies){
-  for(let actor of movies.actors){
+  for(let actor of movie.actors){
     console.log(actor);
   }
 }
 // 26. Log the number of genres in all three movies one by one
 for(let movie of movies){
-  for(let genre of movies.genres){
+  for(let genre of movie.genres){
     console.log(genre);
   }
 }
 // 27. Log the name of all the movies with more than 1 genre
 for(let movie of movies){
-  if(movies.geners.length>1){
+  if(movie.geners.length>1){
     console.log(movie.title);
   }
 }
 // 28. Log the name of all the movies with more than 1 actors
 for(let movie of movies){
-  if(movies.actors.length>1){
+  if(movie.actors.length>1){
     console.log(movie.title);
   }
 }
 // 29. Log the name of all the movies with exactly 3 actors
 for(let movie of movies){
-  if(movies.actors.length>1){
+  if(movie.actors.length>1){
     console.log(movie.title);
   }
 }
 // 30. Log the name of all the movies with year `2018`
 for(let movie of movies){
-  if(movies.year===2018){
+  if(movie.year===`2018`){
     console.log(movie.title);
   }
 }
