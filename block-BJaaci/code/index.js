@@ -112,7 +112,7 @@ for(let movie of movies){
   }
 }
 // 29. Log the name of all the movies with exactly 3 actors
-or(let movie of movies){
+for(let movie of movies){
   if(movies.actors.length>1){
     console.log(movie.title);
   }
