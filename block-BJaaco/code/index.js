@@ -93,15 +93,22 @@ console.log(revert(['Ryan', 'John', 'Bran'])); //['Bran', 'John', 'Ryan']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear(array) {
+function clear(value){
+  return( value == false ||
+  value == ""||
+  value == 0||
+  value == null ||
+  value == undefined);
+}
+function revert(array) {
   // your code
-  for(let i=0; i<array.length; i++){
-    if(array[i]===""||array[i]===0||array[i]===null||array[i]===undefined){
-    delete array[i];
+  let final = [];
+  for(let value of array){
+  if(!clear(value)){
+    final.push(value)
   }
 }
-  array.reverse();
-  return array;
+  return final
 }
 
 // Uncomment the code below and test the output
@@ -125,11 +132,11 @@ console.log(clear(['Ryan', null, 0, 'John', 'Bran'])); //['Bran', 'John', 'Ryan'
 
 function arrayToObj(array) {
   // your code
-  let object={};
+  let final={};
   for(let i=0;i<array.length;i++){
-     object[i] =array[i];
+     final[i] =array[i];
   }
-  return object;
+  return final;
 }
 
 // Uncomment the code below and test the output
